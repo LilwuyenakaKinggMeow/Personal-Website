@@ -292,7 +292,21 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+    const SUPABASE_URL = "https://sbqjvpxzqgqfwnxwqjwb.supabase.cohttps://brtpodvdnwsjqhfsqqgy.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_8f2W4kss3YXairlLZmkcZg_MtPq9B9S";
+
+    const supabase = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+</script>
+
+<!-- YOUR JAVASCRIPT -->
+<script src="script.js"></script>
 
 </body>
 </html>
