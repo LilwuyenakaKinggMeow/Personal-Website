@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 // Gọi tới supabaseClient đã khởi tạo bên HTML
                 const { data, error } = await supabaseClient
-                    .from("messages") // Đổi tên bảng ở đây nếu bảng của bạn khác tên
+                    .from("contacts") // Đổi tên bảng ở đây nếu bảng của bạn khác tên
                     .insert([
                         {
                             name: name,
