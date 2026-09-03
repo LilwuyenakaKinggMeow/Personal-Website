@@ -254,6 +254,7 @@
                     type="text"
                     id="name"
                     placeholder="Your name"
+                    autocomplete="name"
                     required
                 >
 
@@ -261,6 +262,7 @@
                     type="email"
                     id="email"
                     placeholder="Your email"
+                    autocomplete="email"
                     required
                 >
 
@@ -292,21 +294,22 @@
     </footer>
 
 
-    <!-- SUPABASE -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- SUPABASE SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<script>
-    const SUPABASE_URL = "https://brtpodvdnwsjqhfsqqgy.supabase.co";
-    const SUPABASE_ANON_KEY = "sb_publishable_8f2W4kss3YXairlLZmkcZg_MtPq9B9S";
+    <script>
+        const SUPABASE_URL = "https://brtpodvdnwsjqhfsqqgy.supabase.co";
+        const SUPABASE_ANON_KEY = "sb_publishable_8f2W4kss3YXairlLZmkcZg_MtPq9B9S";
 
-    const supabase = window.supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_ANON_KEY
-    );
-</script>
+        // Tạo instance duy nhất với tên supabaseClient để tránh trùng lặp
+        const supabaseClient = window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_ANON_KEY
+        );
+    </script>
 
-<!-- YOUR JAVASCRIPT -->
-<script src="script.js"></script>
+    <!-- JS của dự án -->
+    <script src="script.js"></script>
 
 </body>
 </html>
