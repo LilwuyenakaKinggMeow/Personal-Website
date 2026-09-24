@@ -2,10 +2,25 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Jenkins is working!'
+                echo 'Building Personal Website...'
             }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploy successful!'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '========================================'
+            echo 'BUILD SUCCESS!'
+            echo 'Website: https://personal-website-lilwuyen.vercel.app/'
+            echo '========================================'
         }
     }
 }
